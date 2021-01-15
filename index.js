@@ -16,6 +16,7 @@ function() {
     }
 })
 
+
 //------------------------Question 2 ---------------------------
 //Write a JavaScript program to remove items from a dropdown list.
 //In order to create the list we are providing you with the array below, those items are the ones you need to add to the dropdown list as the select options
@@ -24,6 +25,7 @@ function() {
 // append the button as a child of the element with the 'id = a-2'
 const colors = [ 'red' , 'white', 'black' , 'green' , 'orange'];
 
+//resolve // QUESTION 2 here
 let ddlist = document.createElement("select")
 ddlist.id = "selectList"
 let optionItem
@@ -51,12 +53,6 @@ removeButton.addEventListener("click",
         wholeList.remove(wholeList.selectedIndex)
     }
 )
-
-//resolve // QUESTION 2 here
-
-
-
-
 
 
 //------------------------Question 3 ---------------------------
