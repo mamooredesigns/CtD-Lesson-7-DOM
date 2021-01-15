@@ -6,7 +6,18 @@
 
 
 //resolve // QUESTION 1 here
-
+let child = document.createElement("div")
+document.getElementById("a-1").appendChild(child)
+child.className = "square"
+child.innerHTML = "X"
+child.addEventListener("click", 
+function() {
+    if (child.innerHTML == "X") {
+        child.innerHTML = "O"
+    } else {
+        child.innerHTML = "X"
+    }
+})
 
 
 
