@@ -59,7 +59,7 @@ removeButton.addEventListener("click",
 //Now lets mix some maths and programming. In the function below (calculate_sphere) write a JavaScript program to calculate the volume and surface area of a sphere.
 //take the radius from the input value element with the 'id=radius' in the index.html file
 //And display the results in the elements with the 'id = volume' and 'id = area' respectively
-//hint: the volumen of a sphere is ((4/3) × π × r^3) and the surface area is (4 × π × r^2)
+//hint: the volume of a sphere is ((4/3) × π × r^3) and the surface area is (4 × π × r^2)
 
 
 const calculateSphere = () =>{
@@ -74,3 +74,52 @@ const calculateSphere = () =>{
 
 
 //resolve // QUESTION 4 here
+let button1 = document.createElement("button")
+document.getElementById("a-1").style.display = "block"
+button1.innerHTML = "Hide Question 1"
+let button2 = document.createElement("button")
+document.getElementById("a-2").style.display = "block"
+button2.innerHTML = "Hide Question 2"
+let button3 = document.createElement("button")
+document.getElementById("a-3").style.display = "block"
+button3.innerHTML = "Hide Question 3"
+
+document.getElementById("a-4").appendChild(button1)
+document.getElementById("a-4").appendChild(button2)
+document.getElementById("a-4").appendChild(button3)
+
+button1.addEventListener("click", 
+function() {
+    if (document.getElementById("a-1").style.display == "block") {
+        document.getElementById("a-1").style.display = "none"
+        button1.innerHTML = "Show Question 1"
+    } else {
+        document.getElementById("a-1").style.display = "block"
+        button1.innerHTML = "Hide Question 1"
+    }
+}
+)
+
+button2.addEventListener("click", 
+function() {
+    if (document.getElementById("a-2").style.display == "block") {
+        document.getElementById("a-2").style.display = "none"
+        button2.innerHTML = "Show Question 2"
+    } else {
+        document.getElementById("a-2").style.display = "block"
+        button2.innerHTML = "Hide Question 2"
+    }
+}
+)
+
+button3.addEventListener("click", 
+function() {
+    if (document.getElementById("a-3").style.display == "block") {
+        document.getElementById("a-3").style.display = "none"
+        button3.innerHTML = "Show Question 3"
+    } else {
+        document.getElementById("a-3").style.display = "block"
+        button3.innerHTML = "Hide Question 3"
+    }
+}
+)
