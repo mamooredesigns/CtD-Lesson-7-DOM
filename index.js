@@ -61,17 +61,21 @@ removeButton.addEventListener("click",
 //And display the results in the elements with the 'id = volume' and 'id = area' respectively
 //hint: the volume of a sphere is ((4/3) × π × r^3) and the surface area is (4 × π × r^2)
 
+let userInput = document.getElementById("radius")
 
 const calculateSphere = () =>{
-
+    let userNum = parseInt(userInput.value)
+    let volume
+    volume = (4/3) * Math.PI * Math.pow(userNum, 3)
+    document.getElementById("volume").value = volume
+    let area
+    area = 4 * Math.PI * Math.pow(userNum, 2)
+    document.getElementById("area").value = area
  }
-
-
 
 
 //------------------------Question 4 ---------------------------
 //Now in this exercise we want you to create 3 buttons, each with a click action that will hide the respective question's answer above. So if you click the "Hide Question 1" button it will hide from the DOM the answer to your first exercise. If you click it again it will show the answer. 
-
 
 //resolve // QUESTION 4 here
 let button1 = document.createElement("button")
