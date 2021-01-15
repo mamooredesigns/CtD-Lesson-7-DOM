@@ -2,9 +2,6 @@
 //Is time to create things in the DOM!!. We want you to create a new 'div' Element and append it as a child of the element that has the 'id = a-1' (the element is in index.html file)
 // all right our new element needs style. For that, assign to the new element the className 'square'!. Each time the user clicks on the new element it has to respond changing the displayed text 'x' to 'o'
 
-
-
-
 //resolve // QUESTION 1 here
 let child = document.createElement("div")
 document.getElementById("a-1").appendChild(child)
@@ -19,18 +16,41 @@ function() {
     }
 })
 
-
-
 //------------------------Question 2 ---------------------------
 //Write a JavaScript program to remove items from a dropdown list.
-//In order to create the list we are providing you with the array bellow, those items are the ones you need to add to the dropdown list as the select options
+//In order to create the list we are providing you with the array below, those items are the ones you need to add to the dropdown list as the select options
 //you also need to create a button that makes the remove action of the element selected
 // append the new list as a child of the element with the 'id = a-2'
 // append the button as a child of the element with the 'id = a-2'
 const colors = [ 'red' , 'white', 'black' , 'green' , 'orange'];
 
-
-
+let ddlist = document.createElement("select")
+ddlist.id = "selectList"
+let optionItem
+let removeButton = document.createElement("button")
+removeButton.type = "button"
+removeButton.innerHTML = "Remove"
+for (i = 0; i < colors.length; i++) {
+    text = colors[i]
+    optionItem = document.createElement("option")
+    optionItem.id = text
+    optionItem.value = text
+    optionItem.innerHTML = text
+    ddlist.appendChild(optionItem)
+}
+document.getElementById("a-2").appendChild(ddlist)
+document.getElementById("a-2").appendChild(removeButton)
+removeButton.addEventListener("click", 
+    function(){
+        var wholeList = document.getElementById("selectList")
+        console.log(wholeList)
+        var indexOfSelected = wholeList.selectedIndex
+        console.log(indexOfSelected)
+        var textOfSelected = wholeList.options[indexOfSelected].text
+        console.log(textOfSelected)
+        wholeList.remove(wholeList.selectedIndex)
+    }
+)
 
 //resolve // QUESTION 2 here
 
